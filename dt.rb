@@ -14,5 +14,5 @@ def easter(year)
 	x = h + l - 7 * m + 114
 	month = x / 31
 	day = (x % 31) + 1
-	[month, day]
+	[year, month, day]
 end

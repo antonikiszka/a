@@ -1,5 +1,7 @@
 require_relative 'tree'
 require_relative 'a'
+require_relative 'dt'
+require 'date'
 
 tree = Tree.new
 
@@ -26,7 +28,14 @@ loop do
 		File.open("tree", "w") do |file|
 			file.puts (tree.to_a * ",")
 		end
+	elsif kome == "wiel"
+		puts "\nKtorego roku wielkanoc obliczyc?\n"
+		year = gets.chomp!
+		date = easter(year.to_i)
+		d = Date.new *date
+		puts d
 	else
+		
 		puts "\nNi mo taki komendy!!!!!!!!!!"
 	end
 	
